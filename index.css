@@ -1,0 +1,108 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    z-index: 5;
+    width: 90%;
+    background-color: #1A1818;
+}
+
+hr{
+    width: 70vw;
+    height: 0px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+    
+}
+
+body {
+    background-color:#1A1818;
+
+}
+
+li {
+    padding: 5px;
+    font-size: 80px;  
+    font-family: "DM Serif Display", serif;  
+}
+
+main{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: rows;
+
+}
+.main-left-padding {
+    width: 40%;
+    
+
+}
+
+.sub-main{
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: fixed;
+    top: 30vh;
+    align-items: center;
+    width: 40%;
+    padding: 20px;
+}
+
+.title{
+    cursor: pointer;
+    font-size: 5vw;
+}
+.descript{
+    padding: 0px;
+    font-size: 2vw;
+    padding-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-container{
+    min-width: 20vw;
+    padding: 10%;
+}
+
+.profile-img {
+    border-radius:50%;
+    width: 4vw;
+    height: 4vw;
+}
+
+.about-me {
+    color: burlywood
+}
+
+.nav-year{
+    font-size: 3vw;
+}
