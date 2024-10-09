@@ -1,50 +1,171 @@
-<!DOCTYPE html>
-<html>
-    <head>
+    <!DOCTYPE html>
+    <html>
+        <head>
 
-    </head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=DM+Serif+Display:ital@0;1&family=Eagle+Lake&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <body>
-        <nav>
-            <img class='profile-img' src="assets/profile.png"/>
-            <hr>
-            <div class="nav-year">
-                2024
-            </div>
-        </nav>
+        </head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=DM+Serif+Display:ital@0;1&family=Eagle+Lake&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <body>
+            <!---<nav>
+                <img id='profile-img' src="assets/profile.png"/>
+                
+                <div class="nav-year">
+                    2024
+                </div>
+            </nav>
+            -->
 
-        <main>
-
-            <div class="content">
-                <div>
-                    Hi, I'm Eugene Dave G. Tumagan
+            <section id="section-cover">
+                <img class='cover-profile-img' id="cover-profile-img" src="assets/profile.png"/>
+                <div id="cover-sep"></div>
+                <div class="cover-year">
+                    2024
                 </div>
                 
-                <div>
-
-                </div>
-            </div>  
-
-            <div class="main-left"></div>
                 
-            <div class="main-right">
+            </section>
+
+            <div id="top-gradient"></div>
+            <main>  
+                
+                
                 <div class="menu-container">
-                    <ul class="menu">
-                        <li class="title highlight">ABOUT ME</li>
-                        <li class="descript">Learn more about my journey, pssions and education.</li>
-                        
-                        <li class="title">SKILLS</li>
-                        <li class="descript">- This is a description</li>
-                        <li class="title">PROJECTS</li>
-                        <li class="descript">- This is a description</li>
-                        <li class="title">CERTIFICATES/<br>ACHIEVEMENTS</li>
-                        <li class="descript">- This is a description</li>
+                    <ul class="menu" id="menu">
+                        <li class="title"><a href="#">INTRODUCTION</a></li>
+                        <br>
+                        <li class="title"><a href="#">TOOLS</a></li>
+                        <br>    
+                        <li class="title"><a href="#">WORKS</a></li>
+                        <br>
+                        <li class="title"><a href="#">CERTIFICATES/<br>ACHIEVEMENTS</a></li>  
                     </ul>
+                        
                 </div>
-            </div>
-        </main>
-    </body>
-</html>
+                
+            </main>
+            <div id="content">     
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+                <p>hello</p>  
+                <br>
+                <h1>TEST</h1>
+               
+            </div>  
+        </body>
+        <script type="module">
+            const coverClicked = (event) => {
+                //event.srcElement.style.borderWidth = '0px'
+                const img = document.getElementById('cover-profile-img')
+                //img.id = 'cover-profile-img-end'
+
+                // animate to top
+                // reduce height
+                img.style.position = 'static'   
+                //img.classList.add('cover-profile-img-end')
+
+                const section = document.getElementById('section-cover')
+                section.classList.add('cover-to-nav')
+            
+            
+
+                setTimeout(() => {
+                    //event.srcElement.remove()
+                    document.getElementById('cover-sep').style.display = 'block'
+                    
+                }, 1000); // 3000 milliseconds = 3 seconds*/
+
+                setTimeout(() => {
+                    const titles = document.getElementById('menu').children
+                    console.log(titles)
+                    let delay = 0
+                    for (let i=0; i<titles.length; i++){
+                        if (!(titles[i].classList.contains('title'))){continue}
+                        delay = 250* (i+1)
+                        setTimeout(()=>{titles[i].style.display = 'block'
+                        console.log(titles[i])
+                        }, delay)
+                        
+                    }
+                    const displayBar = document.createElement('li')
+                    displayBar.innerHTML = '<a class="blinking-display">__</a>'
+                    document.getElementById('menu').appendChild(displayBar)
+                    
+                    
+                    setTimeout(()=>{
+                        document.body.style.backgroundColor = 'white'
+                        const content = document.getElementById('content')
+                        content.style.display = 'flex'
+
+                    },250*titles.length)
+                }, 1500)
+                
+            }
+        setTimeout(() => {
+            coverClicked()
+            
+        }, 1000)
+        </script>
+    </html>
