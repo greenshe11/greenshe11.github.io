@@ -5,6 +5,8 @@
 }
 
 /* Make a scrollable container */
+
+
 .menu {
     width: 100%;
     height: 50;
@@ -152,7 +154,7 @@ main{
 
 .cover-profile-img {
     border-radius:50%;
-    width: 50px;
+    width: 50px;    
     height: 50px;
     
     border-width: 5px;
@@ -249,9 +251,38 @@ main{
     animation: cover-sep-expand 5s cubic-bezier(0,.96,0,.99) forwards;
 }
 
-@keyframes cover-sep-expand {
+@media (max-width: 400px) {
+    #cover-sep{
+  
+    animation: cover-sep-expand-small 5s cubic-bezier(0,.96,0,.99) forwards;
+    }
+}
+
+@media (max-width: 900px) {
+    #cover-sep{
+ 
+    animation: cover-sep-expand-medium 5s cubic-bezier(0,.96,0,.99) forwards;
+    }
+}
+
+@keyframes cover-sep-expand-small {
+    to {
+        width: 30%;    
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+}
+@keyframes cover-sep-expand-medium {
     to {
         width: 50%;    
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+}
+
+@keyframes cover-sep-expand {
+    to {
+        width: 80%;    
         margin-left: 10px;
         margin-right: 20px;
     }
@@ -286,15 +317,22 @@ main{
 
 #content{
     display: none;
-    flex-wrap: wrap;
     width: 100%;
-    background-color: white;
-    padding: 20px;
-    padding-top: 120px;
+    background-color: rgba(26,24,24,1);
+    padding-top: 120px; 
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     margin-left: 30%;
+    overflow-y: hidden;
     opacity: 1;
     color: black;
+   
+}
+
+.content-page {
+    background-color: white;        
+    width: 100%;
     animation: content-init 2s cubic-bezier(0,.96,0,.99) forwards;
 }
 

@@ -3,9 +3,9 @@
         <head>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <meta charset=“UTF-8”>
-            <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-            <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=DM+Serif+Display:ital@0;1&family=Eagle+Lake&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="/index.css">
         </head>
@@ -26,15 +26,11 @@
                 <div class="cover-year">
                     2024
                 </div>
-                
+
                 
             </section>
 
-            <div id="top-gradient"></div>
-            <main>  
-                
-                
-                <div class="menu-container">
+                <div class="menu-container" id="menu-root">
                     <ul class="menu" id="menu">
                         <li class="title"><a href="#">INTRODUCTION</a></li>
                         <br>
@@ -46,10 +42,10 @@
                     </ul>
                         
                 </div>
-                
-            </main>
+           
             <div id="content">     
-                <p>hello</p>  
+                <div class="content-page">
+                    <p>hello</p>  
                 <br>
                 <h1>TEST</h1>
                 <p>hello</p>  
@@ -116,13 +112,94 @@
                 <br>
                 <h1>TEST</h1>
                
+                </div>
             </div>  
         </body>
         <script type="module">
+           // Define the media query for max-width: 768px
+            class MQ {
+                constructor(width){
+                    this.mediaQuery = window.matchMedia(`(max-width: ${width})`)
+                    this.funcTriggersTrue = []
+                    this.funcTriggersFalse = []
+                    this.mediaQuery.addEventListener('change', this.checkEvents);
+                }
+            
+
+            addFuncTrue(func) {
+                this.funcTriggersTrue.push(func)
+            }
+
+            addFuncFalse(func){
+                this.funcTriggersFalse.push(func)
+            }
+
+            runTrue(){
+                for (let i=0; i<this.funcTriggersTrue.length; i++){
+                    this.funcTriggersTrue[i]()
+                }
+            }
+
+            runFalse(){
+                for (let i=0; i<this.funcTriggersFalse.length; i++){
+                    this.funcTriggersFalse[i]()
+                }
+            }
+        
+
+            checkEvents = (runTriggers=true) => {
+                // Add an event listener to watch for changes in screen size
+                 // Function to log 'hello' if the media query condition is met
+                const event = this.mediaQuery
+                if (!(event)){return null}
+                if (event.matches) {
+                    runTriggers? this.runTrue() : null // This will log when the screen width is 768px or less
+                    return true
+                    
+                }else{
+                    runTriggers ? this.runFalse() : null
+                    return false
+                }
+       
+            }
+        }
+
+            const mq = new MQ('900px')
+            mq.addFuncTrue(()=>{
+                const titles = document.getElementsByClassName('title')
+                Array.from(titles).forEach((value)=> {
+                    value.style.fontSize = '15px'
+                })
+            })
+            mq.addFuncFalse(()=>{
+                const titles = document.getElementsByClassName('title')
+                Array.from(titles).forEach((value)=> {
+                    value.style.fontSize = '30px'
+                })
+            })
+            mq.checkEvents()
+            
+            const mqSmall = new MQ('600px')
+            mqSmall.addFuncTrue(()=>{
+        
+                document.getElementById('content').style.paddingTop = '120px'
+                document.getElementById('menu-root').style.display = 'none'
+                document.getElementById('content').style.marginLeft = '0%'
+                
+            })
+            mqSmall.addFuncFalse(()=>{
+                document.getElementById('content').style.paddingTop = '120px'
+                document.getElementById('menu-root').style.display = 'flex'
+                document.getElementById('content').style.marginLeft = '30%'
+                
+            })
+            mqSmall.checkEvents()
+
+
             const coverClicked = (event) => {
                 //event.srcElement.style.borderWidth = '0px'
                 const img = document.getElementById('cover-profile-img')
-                //img.id = 'cover-profile-img-end'
+                
 
                 // animate to top
                 // reduce height
@@ -143,15 +220,20 @@
                 setTimeout(() => {
                     const titles = document.getElementById('menu').children
                     console.log(titles)
+                    const willAddDelay = mqSmall.checkEvents(false)
                     let delay = 0
                     for (let i=0; i<titles.length; i++){
                         if (!(titles[i].classList.contains('title'))){continue}
-                        delay = 250* (i+1)
+                        if (!(willAddDelay)) {
+                            delay = 100* (i+1)
+                        }
                         setTimeout(()=>{titles[i].style.display = 'block'
                         console.log(titles[i])
                         }, delay)
                         
                     }
+
+                  
                     const displayBar = document.createElement('li')
                     displayBar.innerHTML = '<a class="blinking-display">__</a>'
                     document.getElementById('menu').appendChild(displayBar)
@@ -161,8 +243,9 @@
                         document.body.style.backgroundColor = 'white'
                         const content = document.getElementById('content')
                         content.style.display = 'flex'
+                     
 
-                    },250*titles.length)
+                    },delay+100)
                 }, 1500)
                 
             }
