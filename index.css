@@ -72,19 +72,28 @@ body {
 
 .title a {
     font-family: 'Consolas', 'Lucida Console', monospace;
-    color: white;
+    color: gray;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: padding 0.3s ease-out, color 0.3s ease-out;;
     margin-bottom: 20px;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+    width: 80%;
    
 }
 
+.transparent-sep {
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+    height: 30px;
+}
+
+
+
 .title a:hover {
-    color: orangered;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    
-    
+    color: white;
+    padding-left: 20px;
 
 }
 
@@ -142,8 +151,30 @@ main{
     min-width: 20vw;
     position: fixed;
     background-color: rgba(26,24,24,1);
+
+   
     
 
+}
+
+.menu-container-ani {
+    animation: menu-container-bg-preview 60s ease-in-out forwards;
+
+}
+
+@keyframes menu-container-bg-preview {
+    0% {
+        background-color: rgba(26,24,24,1);
+    }
+    3% {
+        background-color: rgba(26,24,24,0.8);
+    }
+    97% {
+        background-color: rgba(26,24,24,0.8);
+    }
+    100% {
+        background-color: rgba(26,24,24,0.1);
+    }
 }
 
 #profile-img {
@@ -201,9 +232,6 @@ main{
     }
 }
 
-.highlight {
-    color: burlywood
-}
 
 .nav-year{
     font-size: 20px;
@@ -228,6 +256,28 @@ main{
     padding: 10px;
     
 }
+
+
+#video-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    
+    min-height: 100%;
+    z-index: -1; /* Make sure it's behind other content */
+    object-fit: cover; /* Ensures the video covers the entire area */
+    opacity: 0;
+    animation: appear 2s ease-in-out forwards;
+}
+
+@keyframes appear {
+    to{
+        opacity: 1
+    }
+}
+
 
 
 
@@ -318,7 +368,7 @@ main{
 #content{
     display: none;
     width: 100%;
-    background-color: rgba(26,24,24,1);
+    
     padding-top: 120px; 
     justify-content: flex-start;
     align-items: flex-start;
@@ -332,7 +382,13 @@ main{
 
 .content-page {
     background-color: white;        
-    width: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    transition: margin 0.3s ease-out;
     animation: content-init 2s cubic-bezier(0,.96,0,.99) forwards;
 }
 
@@ -340,6 +396,7 @@ main{
     0% {
         opacity: 1;
         transform: translateY(100vh);
+     
     }
 
    
@@ -361,4 +418,17 @@ main{
     to{
         opacity: 1;
     }
+}
+
+.title a.active {
+    color: orangered;
+}
+
+.top-p{
+    text-align: left;
+    padding-left: 20px;
+}
+
+.p{
+    text-align: left;
 }
