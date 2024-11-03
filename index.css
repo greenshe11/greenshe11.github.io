@@ -11,6 +11,9 @@
     width: 100%;
     height: 50;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 
@@ -80,6 +83,8 @@ body {
     word-wrap: break-word;
     white-space: normal;
     width: 80%;
+    font-size: 20px;
+    
    
 }
 
@@ -173,7 +178,7 @@ main{
         background-color: rgba(26,24,24,0.8);
     }
     100% {
-        background-color: rgba(26,24,24,0.1);
+        background-color: rgba(26,24,24,0.8 );
     }
 }
 
@@ -187,12 +192,23 @@ main{
     border-radius:50%;
     width: 50px;    
     height: 50px;
-    
-    border-width: 5px;
+    border-width: 0px;
     border-style: solid;
+    opacity: 0.3;
     margin-right: 10px;
-   
+    animation: cover-profile-img-anim 1s ease-in-out forwards;
 }
+
+@keyframes cover-profile-img-anim {
+    from{
+        opacity: 0.3
+    }
+    to{
+        opacity: 1
+    }
+}
+
+
 
 
 .cover-profile-img-end {
@@ -218,9 +234,6 @@ main{
     }
 }
 
-.cover-profile-img:hover {
-    border-color: green;
-}
 
 @keyframes cover-profile-img-alternate-colors {
     0%{
@@ -257,7 +270,9 @@ main{
     
 }
 
-
+p span{
+    font-size: 15px;
+}
 #video-background {
     display: none;
     position: fixed;
@@ -268,13 +283,17 @@ main{
     min-height: 100%;
     z-index: -1; /* Make sure it's behind other content */
     object-fit: cover; /* Ensures the video covers the entire area */
+    
+
     opacity: 0;
+    filter:brightness(0.5);
     animation: appear 2s ease-in-out forwards;
 }
 
 @keyframes appear {
     to{
         opacity: 1
+        
     }
 }
 
@@ -387,7 +406,6 @@ main{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: rgba(0,0,0,0);
     transition: margin 0.3s ease-out;
     animation: content-init 2s cubic-bezier(0,.96,0,.99) forwards;
 }
@@ -414,6 +432,22 @@ main{
     animation: blink-display-animation 0.5s linear infinite;
 }
 
+.vertical-title{
+    text-align: left;
+    font-size: 50px; color:white; writing-mode: vertical-rl; /* Makes text vertical from right to left */
+    border-width: 0px;;
+    border-right: 10px;
+    border-color: white;
+    border-style: solid;
+    width: 10%;
+    text-orientation: upright;
+
+}
+
+.enum-tools{
+    margin-left: 20px;
+    text-align: left;
+}
 @keyframes blink-display-animation {
     to{
         opacity: 1;
@@ -421,9 +455,12 @@ main{
 }
 
 .title a.active {
-    color: orangered;
+    color: #B53D4D;
 }
 
+.title a:hover{
+    cursor: pointer;
+}
 .top-p{
     text-align: left;
     padding-left: 20px;
@@ -431,4 +468,391 @@ main{
 
 .p{
     text-align: left;
+}
+
+.tech {
+    font-size: 50px;
+    color: white;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tech-mini {
+    font-size: 20px;
+    color: #B53D4D;
+}
+
+.image-text-container {
+    display: flex; flex-direction: column; padding: 20px; margin: 10px;text-align: left;
+    height: auto;
+}
+
+.image-text-header {
+    color: #333
+}
+
+.image-text-header-right {
+    color: #333
+}
+
+.image-text-content {
+    display: flex; flex-direction: row; height: auto;
+    overflow: hidden; 
+}
+
+.semitrans-card {
+    background-color: rgba(255,255,255,0.8); padding: 20px; margin: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  text-align: left;
+}
+
+.primary-color{
+    color: #B53D4D;
+}
+
+.semitrans-card-neut {padding: 20px; margin: 10px; text-align: left;
+}
+
+.image-preview-pose3d {
+    width: 250px;
+    margin: 10px;
+    margin-top: 0px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-image: url('assets/pose1.png');
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-pose3d-anim 3s step-end infinite, image-preview-passive 2s ease-in-out infinite;
+}
+
+.image-preview-quickmark {
+    width: 150px;
+    height: 250px;
+    margin: 10px;
+    margin-top: 0px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-image: url('assets/qa1.png');
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-quickmark-anim 6s step-end infinite, image-preview-passive 2s ease-in-out infinite;
+}
+
+.image-preview-gg {
+    width: 30%;
+    margin: 10px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-image: url('assets/pose1.png');
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-gg-anim 4s step-end infinite, image-preview-passive 2s ease-in-out infinite;
+}
+
+.autoscroll {
+    display: inline-block;
+    height: 250px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    animation: scrollLoop 10s linear infinite;
+}   
+
+.autoscroll-da {
+    display: inline-block;
+    height: 30px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    animation: scrollLoopDa 5s linear infinite;
+}   
+
+
+.image-preview-da{
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    animation: image-preview-passive 6s linear infinite;
+}
+
+/* Move content from right to left */
+@keyframes scrollLoop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Move content from right to left */
+@keyframes scrollLoopDa {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.image-preview {
+    width: auto;
+    margin: 10px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-passive 5s ease-in-out infinite;
+}
+
+
+.autoscroll-da img{
+    height: 30px;
+    width: 30px;
+
+    object-fit: contain;
+}
+.image-preview-peacock {
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 0px;
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-passive 3s ease-in-out infinite;
+}
+
+.insert{
+    background-image: none; display: block; z-index:0; position: relative; margin-left: 0%; height: 150px; width: 250px;
+}
+.image-preview-sma {
+    width: 300px;
+    margin: 10px;
+    margin-top: 0px;
+    border-color: gray;
+    border-width: 1px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    background-image: url('assets/pose1.png');
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-sma-anim 10s step-end infinite, image-preview-passive 3s ease-in-out infinite;
+}
+
+.image-text-info{
+    display: flex; 
+    flex-direction: column;
+    width: 70%;
+}
+
+@keyframes image-preview-passive {
+    0%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(10px)
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes image-preview-gg-anim {
+    0%{
+        background-image: url('assets/gg1.png');
+        
+    }
+    33%{
+        background-image: url('assets/gg2.png');
+    }
+    66%{
+        background-image: url('assets/gg3.png');
+    }
+    100%{
+        background-image: url('assets/gg4.png');
+    }
+
+}
+
+
+
+@keyframes image-preview-pose3d-anim {
+    0%{
+        background-image: url('assets/pose1.png');
+        overflow-y: hidden;
+    }
+    33%{
+        background-image: url('assets/pose2.png');
+    }
+    66%{
+        background-image: url('assets/pose3.png');
+    }
+    100%{
+        background-image: url('assets/pose1.png');
+    }
+
+}
+
+@keyframes image-preview-quickmark-anim {
+    0%{
+        background-image: url('assets/qa1.png');
+        overflow-y: hidden;
+    }
+    11%{
+        background-image: url('assets/qa2.png');
+        
+    }
+    22%{
+        background-image: url('assets/qa3.png');
+        
+    }
+    33%{
+        background-image: url('assets/qa4.png');
+        
+    }
+    44%{
+        background-image: url('assets/qa5.png');
+        
+    }
+    55%{
+        background-image: url('assets/qa6.png');
+        
+    }
+    66%{
+        background-image: url('assets/qa7.png');
+        
+    }
+    77%{
+        background-image: url('assets/qa8.png');
+        
+    }
+    88%{
+        background-image: url('assets/qa9.png');
+        
+    }
+    100%{
+        background-image: url('assets/qa5.png');
+        
+    }
+
+}
+
+
+@keyframes image-preview-sma-anim {
+    0%{
+        background-image: url('assets/sm1.png');
+    }
+
+    11%{
+        background-image: url('assets/sm2.png');
+    }
+    22%{
+        background-image: url('assets/sm3.png');
+    }
+    33%{
+        background-image: url('assets/sm4.png');
+    }
+    44%{
+        background-image: url('assets/sm5.png');
+    }
+    55%{
+        background-image: url('assets/sm6.png');
+    }
+    66%{
+        background-image: url('assets/sm7.png');
+    }
+    77%{
+        background-image: url('assets/sm8.png');
+    }
+    88%{
+        background-image: url('assets/sm9.png');
+    }
+    100%{
+        background-image: url('assets/sm1.png');
+    }
+
+}
+
+
+.image-preview-appointment {
+    width: 200px;
+    margin: 10px;
+    margin-top: 0px;
+    border-color: gray;
+    border-width: 1px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    background-image: url('assets/private.png');
+    background-size: contain; /* Adjusts image to fit the div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    animation: image-preview-passive 3s ease-in-out infinite;
+}
+
+.cert-container{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 80%;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.cert-name{
+    width: 300px;
+    text-align: left;
+}
+.cert-subtitle{
+    font-size: 10px;
+    text-align: left;
+}
+
+body{
+    scroll-margin-top: 100px;
+}
+
+.contact-row {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.contact-row a {
+    color: blue;
 }

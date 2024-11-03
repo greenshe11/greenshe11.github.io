@@ -4,8 +4,11 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            
+            <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
             <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=DM+Serif+Display:ital@0;1&family=Eagle+Lake&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="/index.css">
         </head>
@@ -25,7 +28,7 @@
             </video>
 
             <section id="section-cover">
-                <img class='cover-profile-img' id="cover-profile-img" src="assets/profile.png"/>
+                <img class='cover-profile-img' style="object-fit: cover;" id="cover-profile-img" src="assets/profile-alt-2.jpg"/>
                 <div id="cover-sep"></div>
                 <div class="cover-year">
                     2024
@@ -36,13 +39,17 @@
 
                 <div class="menu-container" id="menu-root">
                     <ul class="menu" id="menu">
-                        <li class="title"><a href="#" class="active">INTRODUCTION</a></li>
+                        <li class="title"><a id="introduction-tab" onclick="scrollToElement('introduction')" class="active">INTRODUCTION</a></li>
                         <br>
-                        <li class="title"><a href="#">TOOLS</a></li>
+                        <li class="title"><a id="tools-tab" onclick="scrollToElement('tools')">TOOLS</a></li>
                         <br>    
-                        <li class="title"><a href="#">WORKS</a></li>
+                        <li class="title"><a id="works-tab" onclick="scrollToElement('works')">WORKS</a></li>
                         <br>
-                        <li class="title"><a href="#">CERTIFICATES/ ACHIEVEMENTS</a></li>  
+                    
+                        <li class="title"><a id="edu-tab" onclick="scrollToElement('edu')">EDUCATION/ CERTIFICATES</a></li>  
+                        <br>
+                
+                        <li class="title"><a id="contact-tab" onclick="scrollToElement('contact')">CONTACT ME</a></li>  
                     </ul>
                         
                 </div>
@@ -50,180 +57,510 @@
             <div id="content"> 
                 <div class="content-page">
                     <div class="transparent-sep"></div>
-                    <div style="background-color: white; height: 20px; width: 100%"></div>
-                    <div style="background-color: rgba(255,255,255,0.8);padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  text-align: center;">
+                    <div class="semitrans-card-neut">
                        <!--- <img src="https://via.placeholder.com/150" alt="Profile Picture" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; margin-bottom: 15px;">-->
-                        <h1 style="font-size: 50px; margin-bottom: 10px; color: #333;">Eugene Dave G. Tumagan</h1>
-                        <h1>Web Developer</h1>
-                        <br>
-                        <p style="font-size: 16px; color: rgba(20,20,20,1); line-height: 1.5; text-align: left;">
-                            <p class="top-p">Hello, I am Eugene Dave G. Tumagan, a web developer from Brgy. Namocon, Tigbauan, Iloilo.<p>
-                            <p class="top-p">I am a fresh college graduate from Iloilo Science and Technology University, where I took up a degree in <b>Bachelor of Science in Computer Science</b> and is interested to pursue a long-term career in the software development industry.</p>
-
-                            My interest in designing and developing user interfaces is what drove me to be a Front End Web Developer. I have a basic understanding of color combinations, basic photo editing and I ensure to produce high-quality Websites with Responsive Web Design that can be accessed on any devices.
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <a href="#" style="margin: 0 10px; text-decoration: none; color: #1a73e8;">LinkedIn</a>
-                            <a href="#" style="margin: 0 10px; text-decoration: none; color: #1a73e8;">Twitter</a>
-                            <a href="#" style="margin: 0 10px; text-decoration: none; color: #1a73e8;">GitHub</a>
-                        </div>
-                    </div>
-                    <div style="background-color: white; height: 20px; width: 100%">
-                    
-                    </div>
-
-                    <div class="transparent-sep"></div>
-                    <div style="background-color: white; width: 100%">
-                    <p>hello</p>  
-                    <br>
-                    
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                    <p>hello</p>  
-                    <br>
-                    <h1>TEST</h1>
-                   
-                    </div>
-                    
-                    </div>
-                    <div class="transparent-sep"></div>
-                    <div style="background-color: white; width: 100%">
-                        <p>hello</p>  
-                        <br>
-                        
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
-                        <p>hello</p>  
-                        <br>
-                        <h1>TEST</h1>
+                        <h1  id="introduction" style="font-size: 50px; margin-bottom: 10px; color: #333; text-align: left;">Tumagan, <br><span style="font-size: 50px">Eugene Dave G.</span></h1>
+                        <h1 style="font-size: 30px;color: #B53D4D">Web Developer • Programmer • Data Science</h1>
                        
+                        <p style="font-size: 10px; color: rgba(20,20,20,1); text-align: left;">
+                            <span style="padding-left: 20px">Hello, I am Eugene, a developer from Tigbauan, Iloilo. I am a recent college graduate from Iloilo Science and Technology University, where I earned a <b>Bachelor of Science in Computer Science</b>. </span>
+                            <br/><br/>
+                            <span style="padding-left: 20px;">My journey began with a love for creating art, and as I ventured into what technology is capable of, I discovered programming—it quickly became my new passion. Viewing it as a new kind of canvas where each line of code contributes to a larger, meaningful creation. Just like in art, in programming, the possibilities feel boundless, and each project is an opportunity to create something.</span>
+                            <br/><br/>
+                            
+                        </p>
+                        
+                        
+                      
+                        
+                    </div>
+
+                    <hr>
+                    <div class="semitrans-card-neut">
+                        <p style="font-size: 16px; color: rgba(20,20,20,1); text-align: left;">
+                            <span style="padding-left: 20px;">Over the 4 years of studying, I gained insights and experience to numerous fields of Computer Science — Data Science, Machine Learning, Software Development, etc., concluding with 2 months of internship at Inmass Technologies working with end-to-end mobile development project.</span>
+                        </p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: row;padding-top: 50px; padding-bottom: 50px;height: auto; background-color: #B53D4D" >
+                        <div id="tools"  class="vertical-title">
+                                Tools
+                        </div>
+                        <div class="enum-tools">
+                            <h1  style="color:white; height: auto;">Web - Frontend</h1>
+                            <div class="tech-stack">
+                                <i class="devicon-javascript-plain tech"></i>
+                                
+                                <i class="devicon-html5-plain tech"></i>
+                                
+                                <i class="devicon-css3-plain tech"></i>
+
+                                <i class="devicon-bootstrap-plain tech"></i>
+                                
+                                <i class="devicon-nextjs-plain tech" style="color:white;"></i>
+                            </div>
+
+                            <h1 style="color:white; height: auto; margin-top: 50px;">Web - Backend</h1>
+                            <div class="tech-stack">
+                                <i class="devicon-javascript-plain tech"></i>
+                                
+                                <i class="devicon-python-plain tech"></i>
+                                
+                                <i class="devicon-flask-original tech"></i>
+                                <i class="devicon-socketio-original tech" style="color:white;"></i>
+                                <i class="devicon-nextjs-plain tech" style="color:white;"></i>
+                            </div>
+
+                            <h1 style="color:white; height: auto; margin-top: 50px;">Database</h1>
+                            <div class="tech-stack">
+                                <i class="devicon-mysql-original tech"></i>
+                                
+                                <i class="devicon-mongodb-plain tech"></i>
+                                
+                                <i class="devicon-sqlite3-plain tech"></i>
+                                
+                            </div>
+
+                            <h1 style="color:white; height: auto; margin-top: 50px;">Data Science / ML / DL</h1>
+                            <div class="tech-stack">
+                                <i class="devicon-python-plain tech"></i>
+                                
+                                <i class="devicon-numpy-plain tech"></i>
+                                <i class="devicon-pandas-plain tech"></i>
+                                <i class="devicon-matplotlib-plain tech"></i>
+                                <i class="devicon-scikitlearn-plain tech"></i>
+                                <i class="devicon-opencv-plain tech"></i>
+                                <i class="devicon-jupyter-plain-wordmark tech"></i>
+                                
+                            </div>
+
+                            <h1 style="color:white; height: auto; margin-top: 50px;">Application Development</h1>
+                            <div class="tech-stack">
+                                <i class="devicon-python-plain tech"></i>
+                                
+                                <i class="devicon-qt-original tech"></i>
+                                
+                                
+                            </div>
+
+                            <h1 style="color:white; height: auto; margin-top: 50px;">Scripting Tools</h1>
+                            <div class="tech-stack">
+                                <i class="devicon-github-original tech"></i>
+                                
+                                <i class="devicon-vscode-plain tech"></i>
+                                
+                                
+                            </div>
                         </div>
                         
+                        
+                        
+          
+                    </div>
+                    <div class="semitrans-card-neut ">
+                        <h1 id="works" class="primary-color">Personal Projects</h1>
+                    </div>
+
+                    <hr>
+
+                    
+                    <div class="image-text-container">
+                        
+                        <div class="image-text-content">
+                            <div class="image-text-info" >
+                                <h3 class="image-text-header" >Greenshell's Groceries <span style="font-size: 12px">(2024)</span></h3>
+                                <div  >
+                                    <i class="devicon-javascript-plain tech-mini"></i>
+                                    <i class="devicon-html5-plain tech-mini"></i>
+                                    
+                                    <i class="devicon-css3-plain tech-mini"></i>
+
+                                    <i class="devicon-bootstrap-plain tech-mini"></i>
+                                </div>
+                                <span style="overflow: hidden">
+                                    Is a business info page. It contains brief information about the business, contact, the services, as well as its open and closing schedules for the week.
+                                </span>
+                                      
+                                <div class="image-preview">
+                                    <video autoplay muted loop playsinline style="height: 100%; width: 100%; image-rendering:optimizeQuality;">
+                                        <source src="assets/gg.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="image-preview-gg"></div>
+                            
                         </div>
-                </div>    
-              
-                   
-            </div>  
+                        
+
+                    </div>
+
+                    
+
+                    <div class="image-text-container" style="background-color: rgba(0,0,0,0.1); width: 100%; margin-left: 0px; ">
+                       
+                        <div class="image-text-content">
+                            <div class="image-preview-sma"></div>
+                            <div class="image-text-info">
+                                <h3 >SMA <span style="font-size: 12px">(2024)</span></h3>
+                                <div >
+                                    <i class="devicon-javascript-plain tech-mini"></i>
+                                    <i class="devicon-mongodb-plain tech-mini"></i>
+                                    <i class="devicon-nextjs-plain tech-mini"></i>
+                                    <i class="devicon-css3-plain tech-mini"></i>
+                                    <i class="devicon-socketio-original tech-mini"></i>
+                                </div>
+                                <p style="margin-right: 15%;"   ><span> SMA, just a short for <i>Social Media Application</i> is a social media single-page-application that I created as a personal project.
+                                    <br>
+                                    <span>With this project, I learned the ropes of React using Next.js as frontend and backend. It is also my first time using Chakra UI, sockets, and a cloud database that is MongoDB.
+                                    <br><br>The project features <i>real-time chat application, posting, post reacting, friends system, as well as user authentication.</i></span>
+                                </span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="image-text-container">
+                        
+                        <div class="image-text-content">
+                            <div class="image-text-info">
+                                <h3 class="image-text-header">QuickMark <span style="font-size: 12px">(2024)</span></h3>
+                                <div>
+                                    <i class="devicon-python-plain tech-mini"></i>
+                                    <i class="devicon-numpy-plain tech-mini"></i>
+                                    <i class="devicon-opencv-plain tech-mini"></i>
+                                </div>
+                                <p ><span>QuickMark is a project we created for our internship program. It is an AI exam paper checker for instant grading and analytics for android. In this project, my role is to 
+                                    create an optical mark recognition with the combination of image processing algorithms, as well as the developer for building the app. 
+                                    </span>
+                                </p>
+                                
+                            </div>
+                            <div class="image-preview-quickmark"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="image-text-container" style="background-color: rgba(0,0,0,0.1); width: 100%; margin: 0px;   ">
+                        
+                        <div class="image-text-content">
+                            <div class="image-preview-peacock">
+                                <video autoplay muted loop playsinline style="height: 100%;">
+                                    <source src="assets/peacock.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            
+                            <div class="image-text-info" >
+                                <h3 class="image-text-header">Peacock Landing Page <span style="font-size: 12px">(2024)</span> </h3>
+                                <div >
+                                    <i class="devicon-javascript-plain tech-mini"></i>
+                                    <i class="devicon-html5-plain tech-mini"></i>
+                                    
+                                    <i class="devicon-css3-plain tech-mini"></i>
+
+                                    <i class="devicon-bootstrap-plain tech-mini"></i>
+                                </div>
+                                
+                                <p>
+                                    <span style="margin-right: 15%; ">
+                                    Is a landing page for a fictional social media site - Peacock.
+                                    </span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    
+                    <div class="image-text-container">
+                        
+                        <div class="image-text-content">
+                            <div class="image-text-info">
+                                <h3 class="image-text-header">3D Pose Generation From Sketch <span style="font-size: 12px">(2023-2024)</span></h3>
+                                <div>
+                                    <i class="devicon-python-plain tech-mini"></i>
+                                    <i class="devicon-numpy-plain tech-mini"></i>
+                                    <i class="devicon-qt-original tech-mini"></i>
+                                </div>
+                                <p ><span>During my final year, I conducted a thesis that creates a 3D pose from a sketch drawn within an application using more simpler techniques and frameworks
+                                    compared to present alternatives via machine learning with an aim to produce a faster generative result.</span>
+                                    <br><br>
+                                    <span>The application uses a drawable canvas with the features: <i>undo, redo, eraser mode, reset</i>, as well as a real-time predictive preview on the right panel.
+                                    </span>
+                                    <br>
+                                    <span>The output creates a posed 3D model that can be exported and interactively viewed into <i>.stl</i> and <i>.obj</i> formats, and an optional mesh recolor.
+                                    </span>
+                                </p>
+                                
+                            </div>
+                            <div class="image-preview-pose3d"></div>
+                        </div>
+                    </div>
+
+                    <div class="image-text-container" style="background-color: rgba(0,0,0,0.1); width: 100%; margin: 0px;   ">
+                        
+                        <div class="image-text-content">
+                            <div class="image-preview-appointment">
+                            </div>
+                            
+                            <div class="image-text-info" >
+                                <h3 class="image-text-header">Appointment System <span style="font-size: 12px">(2024)</span></h3>
+                                <div >
+                                    <i class="devicon-javascript-plain tech-mini"></i>
+                                    <i class="devicon-html5-plain tech-mini"></i>
+                                    
+                                    <i class="devicon-css3-plain tech-mini"></i>
+
+                                    <i class="devicon-bootstrap-plain tech-mini"></i>
+                                    <i class="devicon-flask-original tech-mini"></i>
+                                </div>
+                                
+                                <p style="margin-right: 15%;">
+                                    <span>
+                                        An end-to-end appointment management system incorporating a Gemini-based AI chatbot, automated SMS notifications, booking management, and client information tracking.
+                                        <br>
+                                        <br>
+                                        For this freelancing project, I am responsible for developing and integrating the server-side components, implementing database solutions for client tracking, configuring API endpoints for the AI chatbot, and sms gateway service.
+                                    </span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div style="display: flex; flex-direction: row;padding-top: 50px; padding-bottom: 50px;height: auto; background-color: #B53D4D" >
+                        <div class="vertical-title" style="text-orientation: sideways; width: 18%;">
+                                Interests / Hobbies
+                        </div>
+                        <div class="enum-tools">
+                            
+
+                            <h2 style="color:white; height: auto">EasyComponentsJS  <span style="font-size: 12px">(2024)</span></h2>
+                            <i class="devicon-javascript-plain tech-mini" style="color: white"></i>
+                                
+                                <i class="devicon-html5-plain tech-mini" style="color: white"></i>
+                                
+                                <i class="devicon-css3-plain tech-mini" style="color: white"></i>
+                            <p style="color: white; margin-right: 15%;">Create html/javascript native web components abtracted from additional classes and syntax.</p>
+                            <br>
+                            <h2 style="color:white; height: auto">Pandia <span style="font-size: 12px">(2024)</span></h2>
+                            <i class="devicon-python-plain tech-mini" style="color: white"></i>
+                                
+                                <i class="devicon-matplotlib-plain tech-mini" style="color: white"></i>
+                                
+                                <i class="devicon-jupyter-plain-wordmark tech-mini" style="color: white"></i>
+                            <p style="color: white; margin-right: 15%;">Analyze and build multiple plots in one line within Jupyter notebook via interactive output cell. Named after one of the moons of Jupiter.</p>
+                            <br>
+                            <h2 style="color:white; height: auto">Word Predictor N-gram <span style="font-size: 12px">(2023)</span></h2>
+                                <i class="devicon-python-plain tech-mini" style="color: white"></i>
+                                
+                                <i class="devicon-numpy-plain tech-mini" style="color: white"></i>
+                                <i class="devicon-pandas-plain tech-mini" style="color: white"></i>
+                                <i class="devicon-jupyter-plain-wordmark tech-mini" style="color: white"></i>
+                            <p style="color: white; margin-right: 15%;">Testing practical application of n-gram models and probability by predicting next words from input using the data obtained on nltk brown and nps-chat corpus.</p>
+                        
+                            <br>
+
+                            <h2 style="color:white; height: auto">Movie Recommendation System <span style="font-size: 12px">(2022)</span></h2>
+                                <i class="devicon-python-plain tech-mini" style="color: white"></i>
+                                
+                                <i class="devicon-matplotlib-plain tech-mini" style="color: white"></i>
+                                <i class="devicon-pandas-plain tech-mini" style="color: white"></i>
+                                <i class="devicon-jupyter-plain-wordmark tech-mini" style="color: white"></i>
+                                <i class="devicon-scikitlearn-plain tech-mini" style="color: white"></i>
+                            <p style="color: white; margin-right: 15%;">Create movie recommendation for user based on previous movies watched using an existing dataset of movies via cosine similarity on preferred genres.</p>
+                        
+                            <br>
+
+                            <h2 style="color:white; height: auto">Digital Arts <span style="font-size: 12px">(2022-2023)</span></h2>
+                            <div class="image-preview-da" style="height: 30px;background-color: white; margin-right: 50%; overflow: hidden;">
+                                <div class="autoscroll-da"> 
+                                   <img src="/assets/da/logo0.png"/>
+                                   <img src="/assets/da/logo1.png"/>
+                                   <img src="/assets/da/logo2.png"/>
+                                   <img src="/assets/da/da1.jpg"/>
+                                   <img src="/assets/da/da2.jpg"/>
+                                   <img src="/assets/da/da3.jpg"/>
+                                   <img src="/assets/da/da4.jpg"/>
+                                   <img src="/assets/da/da5.jpg"/>
+                                   <img src="/assets/da/da6.jpg"/>
+                                   <img src="/assets/da/da7.jpg"/>
+                                   <img src="/assets/da/da8.jpg"/>
+                                   <img src="/assets/da/da9.jpg"/>
+
+                                   <img src="/assets/da/logo0.png"/>
+                                   <img src="/assets/da/logo1.png"/>
+                                   <img src="/assets/da/logo2.png"/>
+                                   <img src="/assets/da/da1.jpg"/>
+                                   <img src="/assets/da/da2.jpg"/>
+                                   <img src="/assets/da/da3.jpg"/>
+                                   <img src="/assets/da/da4.jpg"/>
+                                   <img src="/assets/da/da5.jpg"/>
+                                   <img src="/assets/da/da6.jpg"/>
+                                   <img src="/assets/da/da7.jpg"/>
+                                   <img src="/assets/da/da8.jpg"/>
+                                   <img src="/assets/da/da9.jpg"/>
+
+                                
+                                    
+                                </div>
+                            </div>  
+                            <br>
+                            
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="semitrans-card-neut ">
+                        <h1 id="edu" class="primary-color">Education / Certificates</h1>
+                    </div>
+
+                    <hr>
+
+
+                    <div style="background-color: white; width: 100%">
+                    <div class="semitrans-card-neut">
+                        <h3>Iloilo Science and Technology University Iloilo </h3>
+                        <h6>Bachelor of Science in Computer Science (2020-2024)</h6>
+                    </div>
+                    <hr>
+                    <div class="cert-container">
+                        <div class="cert-content">
+                            <h5 class="cert-name">Inmass Technologies - Internship </h5>
+                            <p class="cert-subtitle">
+                                Inmass - 2024
+                            </p>
+                        </div>
+                        <img src="/assets/cert/inmass.png">
+                    </div>
+                    <div id="contact"></div>
+                    <div  class="cert-container">
+                        <div class="cert-content">
+                            <h5 class="cert-name">Hack4Gov 2 - National Level</h5>
+                            <p class="cert-subtitle">
+                                DICT / NCERT - 2023
+                            </p>
+                        </div>
+                        <img src="/assets/cert/h4g.png">
+                    </div>
+
+                    <div class="cert-container">
+                        <div class="cert-content">
+                            <h5 class="cert-name">ASEAN DATA Science Explorers 2023 Competition Participant</h5>
+                            <p class="cert-subtitle">
+                                SAP - 2023
+                            </p>
+                        </div>
+                        <img src="/assets/cert/asendse.png">
+                    </div>
+
+                    <div  class="cert-container">
+                        <div class="cert-content">
+                            <h5 class="cert-name">ASEANDSE Post-Enablement Session - Analytics Cloud Training </h5>
+                            <p class="cert-subtitle">
+                                SAP - 2023
+                            </p>
+                        </div>
+                        <img src="/assets/cert/sapwebinar.png">
+                    </div>
+
+                    <div class="cert-container">
+                        <div class="cert-content">
+                            <h5 class="cert-name">Technical Webinar in Data Science </h5>
+                            <p class="cert-subtitle">
+                                Accenture - 2021
+                            </p>
+                        </div>
+                        <img src="/assets/cert/accenturewebinar.png">
+                    </div>
+                    
+                    <div  class="cert-container">
+                        <div class="cert-content">
+                            <h5 class="cert-name">Getting Grounded on Analytics </h5>
+                            <p class="cert-subtitle">
+                                Sparta - 2021
+                            </p>
+                        </div>
+                        <img src="/assets/cert/sparta.png">
+                    </div>
+                    <hr>
+                    <div class="semitrans-card-neut ">
+                        <h1  class="primary-color">Contact Me</h1> 
+                    </div>
+
+                    <hr>
+                    <div class="contact-row">
+                        <i class="devicon-facebook-plain" style="color: blue;"></i>
+                        <a href="https://www.facebook.com/eugene.dave.g.tumagan/">eugene.dave.g.tumagan</a>
+                    </div>
+                    <div class="contact-row">
+                        +639674688324
+                    </div>
+                    <div class="contact-row">
+                        eugenetumagan02@gmail.com
+                    </div>
+                    <div class="contact-row">
+                        Brgy. Namocon, Tigbauan, Iloilo
+                    </div>
+
         </body>
         <script type="module">
+            const sectionPos = {introduction: 0, tools: undefined, works: undefined, edu: undefined, contact:undefined}
+            const contentPosAllowance = 130
+           
+            
+            function updateSectionPos(getValue){
+                for (let key in sectionPos){
+                    const targetEle = document.getElementById(key);
+                
+                    // Get the element's top position relative to the document
+                    const posy = targetEle.getBoundingClientRect().top
+                    sectionPos[key] = getCurrentPos(key) - contentPosAllowance + window.scrollY
+
+                }
+            }
+
+            function getCurrentPos(id){
+                const targetEle = document.getElementById(id);
+                
+                    // Get the element's top position relative to the document
+                    const posy = targetEle.getBoundingClientRect().top
+                    return posy
+            }
+
+            window.scrollToElement = (id) => {
+                
+                window.scrollTo({
+                    top: getCurrentPos(id) - contentPosAllowance + window.scrollY,
+                    behavior: 'smooth'
+                });
+            };
+
+
+            function getActiveSection(scrollPos){
+                updateSectionPos()
+              
+                sectionPos.introduction = 0
+                let activeId = undefined
+                scrollPos += contentPosAllowance
+                const keys = Object.keys(sectionPos)
+                for (let i=0; i<keys.length; i++){
+                    //console.log(sectionPos['introduction'], scrollPos, sectionPos['tools'], i, keys[i])
+                    const rating =  scrollPos >= sectionPos[keys[i]] && (i==keys.length-1?true:scrollPos < sectionPos[keys[i+1]])
+                    if (rating){
+                        document.getElementById(`${keys[i]}-tab`).className = "active"
+                    }else{
+                        document.getElementById(`${keys[i]}-tab`).className = ""
+                    }   
+                }
+
+            }
+
            // Define the media query for max-width: 768px
             class MQ {
                 constructor(width){
@@ -287,7 +624,7 @@
             })
             mq.checkEvents()
             
-            const mqSmall = new MQ('600px')
+            const mqSmall = new MQ('900px')
             mqSmall.addFuncTrue(()=>{
         
                 document.getElementById('content').style.paddingTop = '120px'
@@ -336,7 +673,7 @@
 
                 setTimeout(() => {
                     const titles = document.getElementById('menu').children
-                    console.log(titles)
+                    
                     const willAddDelay = mqSmall.checkEvents(false)
                     let delay = 0
                     for (let i=0; i<titles.length; i++){
@@ -345,7 +682,7 @@
                             delay = 100* (i+1)
                         }
                         setTimeout(()=>{titles[i].style.display = 'block'
-                        console.log(titles[i])
+                       
                         }, delay)
                         
                     }
@@ -367,7 +704,14 @@
                     setTimeout(()=>{
                        document.getElementById('video-background').style.display = 'block'
                        document.getElementById('menu-root').classList.add('menu-container-ani')
-
+                       
+                       window.addEventListener('scroll', function() {
+                        // Calculate the percentage of current scroll
+                        const scrollTop = window.scrollY;
+                    
+                        // Display the scroll percentage, rounded to 1 decimal place
+                        getActiveSection(scrollTop)
+                      });
                     },delay+1500)
                 }, 1500)
                 
@@ -376,5 +720,6 @@
             coverClicked()
             
         }, 1000)
+
         </script>
     </html>
