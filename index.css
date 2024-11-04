@@ -301,7 +301,7 @@ p span{
 
 
 .cover-to-nav {
-    animation: reduceHeight 2s forwards; /* Apply animation */
+    animation: reduceHeight 0.5s forwards; /* Apply animation */
 }
 
 @keyframes reduceHeight {
@@ -551,8 +551,9 @@ p span{
 }
 
 .image-preview-gg {
-    width: 30%;
+    width: 150px;
     margin: 10px;
+    height: 200px;
     border-color: gray;
     border-width: 1px;
     border-style: solid;
@@ -610,8 +611,7 @@ p span{
     }
 }
 
-.image-preview {
-    width: auto;
+.image-preview video{
     margin: 10px;
     border-color: gray;
     border-width: 1px;
@@ -621,6 +621,20 @@ p span{
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
     overflow-y: hidden;
+    
+
+}
+.image-preview {
+    width: 70%;
+    overflow: hidden;
+    margin-left:0px;
+    position: absolute;
+    z-index: 100;
+    justify-content: right;
+    display: flex;
+    margin-top: 80px;
+    overflow-y: hidden;
+    
     animation: image-preview-passive 5s ease-in-out infinite;
 }
 
@@ -853,6 +867,3 @@ body{
 
 }
 
-.contact-row a {
-    color: blue;
-}
